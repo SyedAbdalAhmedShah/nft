@@ -2,6 +2,9 @@
 
 class AppStrings {
   static const String APP_NAME = "NFT Marketplace";
+  static const String EXPLORE_NFT = "Explore and Mint NFTs";
+  static const String YOU_CAN_BUY =
+      "You can buy and sell the NFTs of the best artists in the world";
 
   static const String WELCOME_NFT_MARKET = "Welcome To \n NFT Marketplace";
 }
