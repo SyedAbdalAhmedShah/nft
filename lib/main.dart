@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           scaffoldBackgroundColor: AppColorss.PRIMARY_COLOR,
           colorScheme: const ColorScheme.dark(
-            primary: AppColorss.PRIMARY_COLOR,
-          ),
+              primary: AppColorss.PRIMARY_COLOR,
+              secondary: AppColorss.BLUE_COLOR),
           useMaterial3: true,
         ),
         home: child,

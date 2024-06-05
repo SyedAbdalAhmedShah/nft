@@ -5,6 +5,6 @@ class AppStrings {
   static const String EXPLORE_NFT = "Explore and Mint NFTs";
   static const String YOU_CAN_BUY =
       "You can buy and sell the NFTs of the best artists in the world";
-
+  static const String GET_STARTED = " Get started now";
   static const String WELCOME_NFT_MARKET = "Welcome To \n NFT Marketplace";
 }
