@@ -8,8 +8,11 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const DecoratedBox(
       decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage(AppAssets.IMAGE_PATH))),
+          image: DecorationImage(
+              image: AssetImage(AppAssets.SPLASH_BACKGROUND_IMG),
+              fit: BoxFit.fill)),
       child: Scaffold(
+        backgroundColor: Colors.transparent,
         body: Column(),
       ),
     );

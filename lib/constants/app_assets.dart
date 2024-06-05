@@ -2,6 +2,6 @@
 
 class AppAssets {
   static const String IMAGE_PATH = "assets/images/";
-  static const String SPLASH_BACKGROUND_IMG =
-      "${IMAGE_PATH}javier-miranda-MrWOCGKFVDg-unsplash 1.png";
+  static const String SPLASH_BACKGROUND_IMG = "${IMAGE_PATH}splash.png";
 }
+  
