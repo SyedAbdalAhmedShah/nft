@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nft/constants/app_colors.dart';
 import 'package:nft/constants/app_strings.dart';
+import 'package:nft/views/bottom_nav_bar.dart';
 import 'package:nft/views/splash.dart';
 
 void main() {
@@ -20,6 +21,8 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => MaterialApp(
         title: AppStrings.APP_NAME,
         theme: ThemeData(
+          appBarTheme: const AppBarTheme(
+              backgroundColor: AppColorss.PRIMARY_COLOR, elevation: 0),
           scaffoldBackgroundColor: AppColorss.PRIMARY_COLOR,
           colorScheme: const ColorScheme.dark(
               primary: AppColorss.PRIMARY_COLOR,
@@ -28,7 +31,7 @@ class MyApp extends StatelessWidget {
         ),
         home: child,
       ),
-      child: const SplashPage(),
+      child: const BottomNavBarScreen(),
     );
   }
 }
