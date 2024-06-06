@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nft/constants/app_assets.dart';
-import 'package:nft/constants/app_colors.dart';
 import 'package:nft/constants/app_strings.dart';
 
 class SplashPage extends StatelessWidget {
@@ -12,6 +11,16 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final gradiantColor = LinearGradient(
+        begin: Alignment.centerLeft,
+        end: Alignment.centerRight,
+        colors: [
+          Theme.of(context).colorScheme.secondary.withOpacity(0.3),
+          Theme.of(context).colorScheme.primary.withOpacity(0.4)
+        ]);
+    final gradiantBorder = Border.all(
+        color: Theme.of(context).colorScheme.secondary.withOpacity(0.3),
+        width: 2.w);
     return DecoratedBox(
       decoration: const BoxDecoration(
           image: DecorationImage(
@@ -40,6 +49,7 @@ class SplashPage extends StatelessWidget {
                       width: double.infinity,
                       padding: EdgeInsets.all(30.r),
                       decoration: BoxDecoration(
+                          border: gradiantBorder,
                           color: Theme.of(context)
                               .colorScheme
                               .primary
@@ -61,41 +71,27 @@ class SplashPage extends StatelessWidget {
                                 color: Colors.white.withOpacity(0.4)),
                           ),
                           Gap(30.h),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(34.r),
-                            child: BackdropFilter(
-                              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                              child: Container(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 50.w, vertical: 20.h),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(34.r),
-                                  gradient: LinearGradient(
-                                      begin: Alignment.centerLeft,
-                                      end: Alignment.centerRight,
-                                      colors: [
-                                        Theme.of(context)
-                                            .colorScheme
-                                            .secondary
-                                            .withOpacity(0.3),
-                                        Theme.of(context)
-                                            .colorScheme
-                                            .primary
-                                            .withOpacity(0.4  )
-                                      ]),
-                                  border: Border.all(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondary
-                                          .withOpacity(0.3),
-                                      width: 2.w),
-                                ),
-                                child: Text(
-                                  AppStrings.GET_STARTED,
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 16.sp,
-                                      fontWeight: FontWeight.w500),
+                          GestureDetector(
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(34.r),
+                              child: BackdropFilter(
+                                filter:
+                                    ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 50.w, vertical: 20.h),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(34.r),
+                                    gradient: gradiantColor,
+                                    border: gradiantBorder,
+                                  ),
+                                  child: Text(
+                                    AppStrings.GET_STARTED,
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 16.sp,
+                                        fontWeight: FontWeight.w500),
+                                  ),
                                 ),
                               ),
                             ),
@@ -105,6 +101,7 @@ class SplashPage extends StatelessWidget {
                     ),
                   ),
                 ),
+                Gap(30.h)
               ],
             ),
           ),
