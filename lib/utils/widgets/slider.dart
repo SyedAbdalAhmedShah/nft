@@ -7,8 +7,8 @@ import 'package:nft/constants/app_strings.dart';
 import 'package:nft/models/slider_model.dart';
 import 'package:nft/constants/app_assets.dart';
 
-class Slider extends StatelessWidget {
-  const Slider({super.key});
+class AppCarouselSlider extends StatelessWidget {
+  const AppCarouselSlider({super.key});
 
   @override
   Widget build(BuildContext context) {
