@@ -33,13 +33,13 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
         //   child: BackdropFilter(
         //     filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
         //     child: DecoratedBox(
-        //       decoration: BoxDecoration(
-        //           border: Border.all(color: Theme.of(context).colorScheme.secondary.withOpacity(0.2), width: 1.w),
-        //           borderRadius: BorderRadius.circular(60.r),
-        //           gradient: LinearGradient(begin: Alignment.centerLeft, end: Alignment.centerRight, colors: [
-        //             Theme.of(context).colorScheme.secondary.withOpacity(0.2),
-        //             const Color(0xff420C5B).withOpacity(0.4)
-        //           ])),
+          //       decoration: BoxDecoration(
+          //           border: Border.all(color: Theme.of(context).colorScheme.secondary.withOpacity(0.2), width: 1.w),
+          //           borderRadius: BorderRadius.circular(60.r),
+          //           gradient: LinearGradient(begin: Alignment.centerLeft, end: Alignment.centerRight, colors: [
+          //             Theme.of(context).colorScheme.secondary.withOpacity(0.2),
+          //             const Color(0xff420C5B).withOpacity(0.4)
+          //           ])),
         //       child: SizedBox(
         //         child: Row(
         //           mainAxisSize: MainAxisSize.max,
