@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:nft/configs/style_config.dart';
 import 'package:nft/constants/app_assets.dart';
 import 'package:nft/constants/app_strings.dart';
 
@@ -11,16 +12,6 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final gradiantColor = LinearGradient(
-        begin: Alignment.centerLeft,
-        end: Alignment.centerRight,
-        colors: [
-          Theme.of(context).colorScheme.secondary.withOpacity(0.3),
-          Theme.of(context).colorScheme.primary.withOpacity(0.4)
-        ]);
-    final gradiantBorder = Border.all(
-        color: Theme.of(context).colorScheme.secondary.withOpacity(0.3),
-        width: 2.w);
     return DecoratedBox(
       decoration: const BoxDecoration(
           image: DecorationImage(
@@ -49,7 +40,7 @@ class SplashPage extends StatelessWidget {
                       width: double.infinity,
                       padding: EdgeInsets.all(30.r),
                       decoration: BoxDecoration(
-                          border: gradiantBorder,
+                          border: StyleConfig(context: context).linearBorder,
                           color: Theme.of(context)
                               .colorScheme
                               .primary
@@ -82,8 +73,10 @@ class SplashPage extends StatelessWidget {
                                       horizontal: 50.w, vertical: 20.h),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(34.r),
-                                    gradient: gradiantColor,
-                                    border: gradiantBorder,
+                                    gradient: StyleConfig(context: context)
+                                        .linearGradient,
+                                    border: StyleConfig(context: context)
+                                        .linearBorder,
                                   ),
                                   child: Text(
                                     AppStrings.GET_STARTED,

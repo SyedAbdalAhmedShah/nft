@@ -1,7 +1,4 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nft/utils/widgets/custom_bottom_navigation.dart';
 import 'package:nft/views/home.dart';
 
