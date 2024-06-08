@@ -12,7 +12,8 @@ class AppBottomNavBar extends StatelessWidget {
           border: Border.all(
               color: Theme.of(context).colorScheme.secondary.withOpacity(0.2),
               width: 1.w),
-          borderRadius: BorderRadius.circular(60.r),
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(70.r), topRight: Radius.circular(70.r)),
           gradient: LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
@@ -26,12 +27,13 @@ class AppBottomNavBar extends StatelessWidget {
         shape: const CircularNotchedRectangle(),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             InkWell(
               borderRadius: BorderRadius.circular(15.0),
               onTap: () {},
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.only(left: 10.0.w),
                 child: Image(
                   image: const AssetImage(
                     AppAssets.HOME_IMG,
@@ -46,7 +48,7 @@ class AppBottomNavBar extends StatelessWidget {
               borderRadius: BorderRadius.circular(15.0),
               onTap: () {},
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.only(right: 10.0.w),
                 child: Image(
                   image: const AssetImage(AppAssets.SIGNALS_IMG),
                   height: 20.h,
@@ -58,7 +60,7 @@ class AppBottomNavBar extends StatelessWidget {
               borderRadius: BorderRadius.circular(15.0),
               onTap: () {},
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.only(right: 10.0.w),
                 child: Image(
                     image: const AssetImage(AppAssets.SEARCH_IMG),
                     height: 20.h,
@@ -69,7 +71,7 @@ class AppBottomNavBar extends StatelessWidget {
               borderRadius: BorderRadius.circular(15.0),
               onTap: () {},
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.only(right: 10.0.w),
                 child: Image(
                   image: const AssetImage(AppAssets.PERSON_IMG),
                   height: 20.h,
