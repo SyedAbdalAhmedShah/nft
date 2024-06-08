@@ -24,58 +24,6 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
           onPressed: () {},
           elevation: 2,
         ),
-        bottomNavigationBar: AppBottomNavBar()
-        //  BottomAppBar(
-        //   color: Colors.transparent,
-        //   padding: EdgeInsets.zero,
-        //   elevation: 0,
-        //   clipBehavior: Clip.antiAlias,
-        //   child: BackdropFilter(
-        //     filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
-        //     child: DecoratedBox(
-          //       decoration: BoxDecoration(
-          //           border: Border.all(color: Theme.of(context).colorScheme.secondary.withOpacity(0.2), width: 1.w),
-          //           borderRadius: BorderRadius.circular(60.r),
-          //           gradient: LinearGradient(begin: Alignment.centerLeft, end: Alignment.centerRight, colors: [
-          //             Theme.of(context).colorScheme.secondary.withOpacity(0.2),
-          //             const Color(0xff420C5B).withOpacity(0.4)
-          //           ])),
-        //       child: SizedBox(
-        //         child: Row(
-        //           mainAxisSize: MainAxisSize.max,
-        //           mainAxisAlignment: MainAxisAlignment.spaceAround,
-        //           children: <Widget>[
-        //             IconButton(
-        //               icon: const Icon(Icons.home),
-        //               onPressed: () {
-        //                 setState(() {});
-        //               },
-        //             ),
-        //             IconButton(
-        //               icon: const Icon(Icons.search),
-        //               onPressed: () {
-        //                 setState(() {});
-        //               },
-        //             ),
-        //             IconButton(
-        //               icon: const Icon(Icons.favorite_border_outlined),
-        //               onPressed: () {
-        //                 setState(() {});
-        //               },
-        //             ),
-        //             IconButton(
-        //               icon: const Icon(Icons.account_circle_outlined),
-        //               onPressed: () {
-        //                 setState(() {});
-        //               },
-        //             )
-        //           ],
-        //         ),
-        //       ),
-        //     ),
-        //   ),
-        // ),
-
-        );
+        bottomNavigationBar: const AppBottomNavBar());
   }
 }
