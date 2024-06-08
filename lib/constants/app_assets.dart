@@ -6,4 +6,8 @@ class AppAssets {
   static const String ART_SLIDER_IMG = "${IMAGE_PATH}Art.png";
   static const String MUSIC_SLIDER_IMG = "${IMAGE_PATH}mussic.png";
   static const String WRORLD_SLIDER_IMG = "${IMAGE_PATH}world.png";
+  static const String HOME_IMG = "${IMAGE_PATH}Home.png";
+  static const String PERSON_IMG = "${IMAGE_PATH}person.png";
+  static const String SEARCH_IMG = "${IMAGE_PATH}search.png";
+  static const String SIGNALS_IMG = "${IMAGE_PATH}Symbol.png";
 }
