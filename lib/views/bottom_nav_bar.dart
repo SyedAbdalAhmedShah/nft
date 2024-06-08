@@ -16,21 +16,24 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: pages.elementAt(0),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(onPressed: () {}),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        elevation: 2,
+      ),
       bottomNavigationBar: BottomAppBar(
         color: Colors.transparent,
         padding: EdgeInsets.zero,
-        shape: const CircularNotchedRectangle(),
-        notchMargin: 20.0,
+        elevation: 0,
         clipBehavior: Clip.antiAlias,
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
           child: DecoratedBox(
             decoration: BoxDecoration(
                 border: Border.all(color: Theme.of(context).colorScheme.secondary.withOpacity(0.2), width: 1.w),
-                borderRadius: BorderRadius.only(topLeft: Radius.circular(60.r), topRight: Radius.circular(60.r)),
+                borderRadius: BorderRadius.circular(60.r),
                 gradient: LinearGradient(begin: Alignment.centerLeft, end: Alignment.centerRight, colors: [
                   Theme.of(context).colorScheme.secondary.withOpacity(0.2),
                   const Color(0xff420C5B).withOpacity(0.4)
@@ -38,7 +41,7 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
             child: SizedBox(
               child: Row(
                 mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   IconButton(
                     icon: const Icon(Icons.home),

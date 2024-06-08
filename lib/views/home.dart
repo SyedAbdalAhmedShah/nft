@@ -9,34 +9,32 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          AppStrings.APP_NAME,
-          style: TextStyle(fontSize: 26.sp, fontWeight: FontWeight.bold),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Gap(kTextTabBarHeight + 5.h),
+        Align(
+          alignment: Alignment.topCenter,
+          child: Text(
+            AppStrings.APP_NAME,
+            style: TextStyle(fontSize: 26.sp, fontWeight: FontWeight.bold),
+          ),
         ),
-      ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Gap(20.h),
-          const AppCarouselSlider(),
-          Gap(20.h),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 12.0.w),
-            child: Column(
-              children: [
-                Text(
-                  AppStrings.TRENDING_COL,
-                  style:
-                      TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500),
-                )
-              ],
-            ),
-          )
-        ],
-      ),
+        Gap(20.h),
+        const AppCarouselSlider(),
+        Gap(20.h),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 12.0.w),
+          child: Column(
+            children: [
+              Text(
+                AppStrings.TRENDING_COL,
+                style: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500),
+              )
+            ],
+          ),
+        )
+      ],
     );
   }
 }
