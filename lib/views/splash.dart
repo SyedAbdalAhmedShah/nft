@@ -1,11 +1,14 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nft/configs/style_config.dart';
 import 'package:nft/constants/app_assets.dart';
 import 'package:nft/constants/app_strings.dart';
+import 'package:nft/utils/widgets/fade_route.dart';
+import 'package:nft/views/bottom_nav_bar.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -63,6 +66,8 @@ class SplashPage extends StatelessWidget {
                           ),
                           Gap(30.h),
                           GestureDetector(
+                            onTap: () => Navigator.of(context).push(
+                                FadeRoute(page: const BottomNavBarScreen())),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(34.r),
                               child: BackdropFilter(

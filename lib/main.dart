@@ -5,11 +5,13 @@ import 'package:nft/configs/theme_config.dart';
 import 'package:nft/constants/app_colors.dart';
 import 'package:nft/constants/app_strings.dart';
 import 'package:nft/views/bottom_nav_bar.dart';
+import 'package:nft/views/splash.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(systemNavigationBarColor: AppColorss.PRIMARY_COLOR),
+    const SystemUiOverlayStyle(
+        systemNavigationBarColor: AppColorss.PRIMARY_COLOR),
   );
   runApp(const MyApp());
 }
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeConfig().themeData,
         home: child,
       ),
-      child: const BottomNavBarScreen(),
+      child: const SplashPage(),
     );
   }
 }
