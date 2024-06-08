@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-import 'package:nft/configs/style_config.dart';
 import 'package:nft/constants/app_strings.dart';
 import 'package:nft/utils/widgets/glass_card.dart';
 import 'package:nft/utils/widgets/slider.dart';
@@ -37,7 +36,16 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500),
               ),
               Gap(10.h),
-              GlassCard(),
+              SizedBox(
+                height: 170.h,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) => Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: const GlassCard(),
+                  ),
+                ),
+              )
             ],
           ),
         )
