@@ -7,7 +7,7 @@ import 'package:gap/gap.dart';
 import 'package:nft/configs/style_config.dart';
 import 'package:nft/constants/app_assets.dart';
 import 'package:nft/constants/app_strings.dart';
-import 'package:nft/utils/widgets/fade_route.dart';
+import 'package:nft/utils/anim/fade_route.dart';
 import 'package:nft/views/bottom_nav_bar.dart';
 
 class SplashPage extends StatelessWidget {
