@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nft/constants/app_assets.dart';
+import 'package:nft/constants/app_colors.dart';
 
 class AppBottomNavBar extends StatelessWidget {
   const AppBottomNavBar({super.key});
@@ -13,13 +14,14 @@ class AppBottomNavBar extends StatelessWidget {
               color: Theme.of(context).colorScheme.secondary.withOpacity(0.2),
               width: 1.w),
           borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(70.r), topRight: Radius.circular(70.r)),
+              topLeft: Radius.circular(60.r), topRight: Radius.circular(60.r)),
           gradient: LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
               colors: [
-                Theme.of(context).colorScheme.secondary.withOpacity(0.2),
-                const Color(0xff420C5B).withOpacity(0.4)
+                Theme.of(context).colorScheme.secondary.withOpacity(0.8),
+                const Color(0xff420C5B).withOpacity(0.8),
+                AppColorss.PRIMARY_COLOR.withOpacity(0.9)
               ])),
       child: BottomAppBar(
         color: Colors.transparent,

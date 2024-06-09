@@ -17,7 +17,7 @@ class GlassCard extends StatelessWidget {
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Container(
-          width: 170.w,
+          width: 180.w,
           padding:
               EdgeInsets.only(left: 10.w, right: 30.w, top: 10.h, bottom: 10.h),
           decoration: BoxDecoration(
@@ -28,8 +28,8 @@ class GlassCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                height: 110.h,
-                width: 130.w,
+                height: 120.h,
+                width: 140.w,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.r),
                     image: const DecorationImage(
@@ -42,11 +42,16 @@ class GlassCard extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Abstract Art"),
-                  Icon(
-                    Icons.favorite,
-                    size: 14.r,
-                    color: Colors.red,
+                  const Text("Abstract Art"),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.favorite,
+                        size: 14.r,
+                        color: Colors.red,
+                      ),
+                      const Text("200"),
+                    ],
                   )
                 ],
               )

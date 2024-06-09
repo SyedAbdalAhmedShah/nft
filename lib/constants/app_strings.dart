@@ -3,6 +3,8 @@
 class AppStrings {
   static const String APP_NAME = "NFT Marketplace";
   static const String TRENDING_COL = "Trending collections";
+  static const String TOP_SELLER = "Top seller";
+
   static const String MUSIC = "Music";
   static const String ART = "Art";
   static const String VIRTUAL_WORLD = "Virtual World";

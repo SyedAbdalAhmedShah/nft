@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Gap(kTextTabBarHeight + 5.h),
+        Gap(kTextTabBarHeight + 15.h),
         Align(
           alignment: Alignment.topCenter,
           child: Text(
@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
             style: TextStyle(fontSize: 26.sp, fontWeight: FontWeight.bold),
           ),
         ),
-        Gap(20.h),
+        Gap(30.h),
         const AppCarouselSlider(),
         Gap(20.h),
         Padding(
@@ -35,17 +35,33 @@ class HomePage extends StatelessWidget {
                 AppStrings.TRENDING_COL,
                 style: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500),
               ),
-              Gap(10.h),
+              Gap(20.h),
               SizedBox(
-                height: 170.h,
+                height: 180.h,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) => Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: const GlassCard(),
+                  itemBuilder: (context, index) => const Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: GlassCard(),
                   ),
                 ),
-              )
+              ),
+              Gap(20.h),
+              Text(
+                AppStrings.TOP_SELLER,
+                style: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500),
+              ),
+              Gap(20.h),
+              SizedBox(
+                height: 180.h,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) => const Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: GlassCard(),
+                  ),
+                ),
+              ),
             ],
           ),
         )
