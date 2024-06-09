@@ -12,60 +12,81 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Gap(kTextTabBarHeight + 15.h),
-        Align(
-          alignment: Alignment.topCenter,
-          child: Text(
-            AppStrings.APP_NAME,
-            style: TextStyle(fontSize: 26.sp, fontWeight: FontWeight.bold),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Gap(kTextTabBarHeight + 15.h),
+          Align(
+            alignment: Alignment.topCenter,
+            child: Text(
+              AppStrings.APP_NAME,
+              style: TextStyle(fontSize: 26.sp, fontWeight: FontWeight.bold),
+            ),
           ),
-        ),
-        Gap(30.h),
-        const AppCarouselSlider(),
-        Gap(20.h),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 12.0.w),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                AppStrings.TRENDING_COL,
-                style: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500),
-              ),
-              Gap(20.h),
-              SizedBox(
-                height: 180.h,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) => const Padding(
-                    padding: EdgeInsets.only(left: 8.0),
-                    child: GlassCard(),
+          Gap(30.h),
+          const AppCarouselSlider(),
+          Gap(20.h),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 12.0.w),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  AppStrings.TRENDING_COL,
+                  style:
+                      TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500),
+                ),
+                Gap(5.h),
+                SizedBox(
+                  height: 180.h,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) => const Padding(
+                      padding: EdgeInsets.only(left: 8.0),
+                      child: GlassCard(),
+                    ),
                   ),
                 ),
-              ),
-              Gap(20.h),
-              Text(
-                AppStrings.TOP_SELLER,
-                style: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500),
-              ),
-              Gap(20.h),
-              SizedBox(
-                height: 180.h,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) => const Padding(
-                    padding: EdgeInsets.only(left: 8.0),
-                    child: GlassCard(),
+                Gap(20.h),
+                Text(
+                  AppStrings.TOP_SELLER,
+                  style:
+                      TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500),
+                ),
+                Gap(5.h),
+                SizedBox(
+                  height: 180.h,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) => const Padding(
+                      padding: EdgeInsets.only(left: 8.0),
+                      child: GlassCard(),
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
-        )
-      ],
+                Gap(15.h),
+                Text(
+                  AppStrings.TOP_SELLER,
+                  style:
+                      TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500),
+                ),
+                Gap(5.h),
+                SizedBox(
+                  height: 180.h,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) => const Padding(
+                      padding: EdgeInsets.only(left: 8.0),
+                      child: GlassCard(),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
