@@ -42,6 +42,7 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: 180.h,
                   child: ListView.builder(
+                    itemCount: trendingCollection.length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) => Padding(
                       padding: const EdgeInsets.only(left: 8.0),
@@ -61,10 +62,13 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: 180.h,
                   child: ListView.builder(
+                    itemCount: topSeller.length,
                     scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) => const Padding(
-                      padding: EdgeInsets.only(left: 8.0),
-                      child: GlassCard(),
+                    itemBuilder: (context, index) => Padding(
+                      padding: const EdgeInsets.only(left: 8.0),
+                      child: GlassCard(
+                        imagePath: topSeller[index],
+                      ),
                     ),
                   ),
                 ),
@@ -75,16 +79,16 @@ class HomePage extends StatelessWidget {
                       TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500),
                 ),
                 Gap(5.h),
-                SizedBox(
-                  height: 180.h,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) => const Padding(
-                      padding: EdgeInsets.only(left: 8.0),
-                      child: GlassCard(),
-                    ),
-                  ),
-                ),
+                // SizedBox(
+                //   height: 180.h,
+                //   child: ListView.builder(
+                //     scrollDirection: Axis.horizontal,
+                //     itemBuilder: (context, index) => const Padding(
+                //       padding: EdgeInsets.only(left: 8.0),
+                //       child: GlassCard(),
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),

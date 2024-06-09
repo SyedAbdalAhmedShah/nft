@@ -1,11 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nft/configs/style_config.dart';
-import 'package:nft/constants/app_assets.dart';
 
 class GlassCard extends StatelessWidget {
   final String imagePath;

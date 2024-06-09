@@ -13,3 +13,16 @@ List<String> trendingCollection = [
   AppAssets.NFT_10,
   AppAssets.NFT_11,
 ];
+
+List<String> topSeller = [
+  AppAssets.NFT_12,
+  AppAssets.NFT_13,
+  AppAssets.NFT_14,
+  AppAssets.NFT_15,
+  AppAssets.NFT_16,
+  AppAssets.NFT_17,
+  AppAssets.NFT_18,
+  AppAssets.NFT_19,
+  AppAssets.NFT_20,
+  AppAssets.NFT_21,
+];
