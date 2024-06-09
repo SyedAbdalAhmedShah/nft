@@ -16,7 +16,7 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         extendBody: true,
-        body: pages.elementAt(0),
+        body: IndexedStack(index: 0, children: pages),
         bottomNavigationBar: const AppBottomNavBar());
   }
 }
