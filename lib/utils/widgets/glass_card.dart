@@ -8,7 +8,8 @@ import 'package:nft/configs/style_config.dart';
 import 'package:nft/constants/app_assets.dart';
 
 class GlassCard extends StatelessWidget {
-  const GlassCard({super.key});
+  final String imagePath;
+  const GlassCard({required this.imagePath, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,9 +33,9 @@ class GlassCard extends StatelessWidget {
                 width: 140.w,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.r),
-                    image: const DecorationImage(
+                    image: DecorationImage(
                         image: AssetImage(
-                          AppAssets.ART_SLIDER_IMG,
+                          imagePath,
                         ),
                         fit: BoxFit.fill)),
               ),

@@ -24,6 +24,7 @@ class AppBottomNavBar extends StatelessWidget {
                 AppColorss.PRIMARY_COLOR.withOpacity(0.9)
               ])),
       child: BottomAppBar(
+        height: 60.h,
         color: Colors.transparent,
         notchMargin: 10,
         shape: const CircularNotchedRectangle(),

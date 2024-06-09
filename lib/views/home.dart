@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nft/constants/app_strings.dart';
+import 'package:nft/constants/constants.dart';
 import 'package:nft/utils/widgets/glass_card.dart';
 import 'package:nft/utils/widgets/slider.dart';
 
@@ -42,9 +43,11 @@ class HomePage extends StatelessWidget {
                   height: 180.h,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) => const Padding(
-                      padding: EdgeInsets.only(left: 8.0),
-                      child: GlassCard(),
+                    itemBuilder: (context, index) => Padding(
+                      padding: const EdgeInsets.only(left: 8.0),
+                      child: GlassCard(
+                        imagePath: trendingCollection[index],
+                      ),
                     ),
                   ),
                 ),
@@ -67,7 +70,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Gap(15.h),
                 Text(
-                  AppStrings.TOP_SELLER,
+                  AppStrings.NEW_COMING,
                   style:
                       TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500),
                 ),
@@ -84,7 +87,8 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
+          Gap(100.h)
         ],
       ),
     );

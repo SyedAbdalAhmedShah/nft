@@ -4,6 +4,7 @@ class AppStrings {
   static const String APP_NAME = "NFT Marketplace";
   static const String TRENDING_COL = "Trending collections";
   static const String TOP_SELLER = "Top seller";
+  static const String NEW_COMING = "Comming Soon";
 
   static const String MUSIC = "Music";
   static const String ART = "Art";
