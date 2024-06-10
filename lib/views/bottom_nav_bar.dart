@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:nft/notifier/bottom_nav_notifier.dart';
 
 import 'package:nft/utils/widgets/custom_bottom_navigation.dart';
 import 'package:nft/views/home.dart';
+import 'package:nft/views/statistic.dart';
 
 class BottomNavBarScreen extends StatefulWidget {
   const BottomNavBarScreen({super.key});
@@ -11,12 +13,21 @@ class BottomNavBarScreen extends StatefulWidget {
 }
 
 class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
-  List<Widget> pages = const [HomePage()];
+  final BottomNavNotifier navNotifier = BottomNavNotifier();
+  List<Widget> pages = const [HomePage(), StatisticPage()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         extendBody: true,
-        body: IndexedStack(index: 0, children: pages),
-        bottomNavigationBar: const AppBottomNavBar());
+        body: ValueListenableBuilder<int>(
+          valueListenable: navNotifier.count,
+          builder: (context, value, child) => IndexedStack(
+            index: value,
+            children: pages,
+          ),
+        ),
+        bottomNavigationBar: AppBottomNavBar(
+          navNotifier: navNotifier,
+        ));
   }
 }

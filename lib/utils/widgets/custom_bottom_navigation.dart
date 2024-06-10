@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nft/constants/app_assets.dart';
 import 'package:nft/constants/app_colors.dart';
+import 'package:nft/notifier/bottom_nav_notifier.dart';
 
 class AppBottomNavBar extends StatelessWidget {
-  const AppBottomNavBar({super.key});
+  final BottomNavNotifier navNotifier;
+  const AppBottomNavBar({required this.navNotifier, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,7 @@ class AppBottomNavBar extends StatelessWidget {
           children: [
             InkWell(
               borderRadius: BorderRadius.circular(15.0),
-              onTap: () {},
+              onTap: () => navNotifier.setBottomNavValue(0),
               child: Padding(
                 padding: EdgeInsets.only(left: 10.0.w),
                 child: Image(
@@ -49,7 +51,7 @@ class AppBottomNavBar extends StatelessWidget {
             ),
             InkWell(
               borderRadius: BorderRadius.circular(15.0),
-              onTap: () {},
+              onTap: () => navNotifier.setBottomNavValue(1),
               child: Padding(
                 padding: EdgeInsets.only(right: 10.0.w),
                 child: Image(
@@ -61,7 +63,7 @@ class AppBottomNavBar extends StatelessWidget {
             ),
             InkWell(
               borderRadius: BorderRadius.circular(15.0),
-              onTap: () {},
+              onTap: () => navNotifier.setBottomNavValue(2),
               child: Padding(
                 padding: EdgeInsets.only(right: 10.0.w),
                 child: Image(
@@ -72,7 +74,7 @@ class AppBottomNavBar extends StatelessWidget {
             ),
             InkWell(
               borderRadius: BorderRadius.circular(15.0),
-              onTap: () {},
+              onTap: () => navNotifier.setBottomNavValue(3),
               child: Padding(
                 padding: EdgeInsets.only(right: 10.0.w),
                 child: Image(

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nft/constants/app_assets.dart';
 import 'package:nft/constants/app_colors.dart';
+import 'package:nft/constants/app_strings.dart';
 
 class NftDetailPage extends StatelessWidget {
   final String imagePath;
@@ -30,7 +31,7 @@ class NftDetailPage extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 20.0.w),
                     child: Text(
-                      "Luppy Club",
+                      AppStrings.DUMMYNAME,
                       style: TextStyle(
                           fontSize: 18.sp, fontWeight: FontWeight.w500),
                     ),
@@ -44,7 +45,9 @@ class NftDetailPage extends StatelessWidget {
                         CircleAvatar(
                           backgroundImage: AssetImage(AppAssets.NFT_1),
                         ),
-                        Text("Alex.S")
+                        Text(
+                          AppStrings.DUMMYNAME2,
+                        )
                       ],
                     ),
                   )
