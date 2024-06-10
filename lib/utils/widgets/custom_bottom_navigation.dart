@@ -38,7 +38,9 @@ class AppBottomNavBar extends StatelessWidget {
               borderRadius: BorderRadius.circular(15.0),
               onTap: () => navNotifier.setBottomNavValue(0),
               child: Padding(
-                padding: EdgeInsets.only(left: 10.0.w),
+                padding: EdgeInsets.only(
+                  left: 10.0.w,
+                ),
                 child: Image(
                   image: const AssetImage(
                     AppAssets.HOME_IMG,

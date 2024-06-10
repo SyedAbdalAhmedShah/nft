@@ -10,6 +10,9 @@ class AppStrings {
   static const String ART = "Art";
   static const String DUMMYNAME = "Luppy Club";
   static const String DUMMYNAME2 = "Alex.S";
+  static const String STATS = "STATS";
+  static const String RANKING = "Ranking";
+  static const String ACTIVITY = "Activity";
 
   static const String VIRTUAL_WORLD = "Virtual World";
   static const String EXPLORE_NFT = "Explore and Mint NFTs";
