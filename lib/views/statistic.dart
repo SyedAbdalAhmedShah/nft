@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nft/constants/app_colors.dart';
@@ -74,23 +75,27 @@ class Rankingview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Column(
-        children: [
-          Gap(10.h),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              StatsButton(
-                buttonName: AppStrings.ALL_CATEGORY,
-                leadingIcon: Icons.grid_view,
-              ),
-              StatsButton(
-                buttonName: AppStrings.ALL_CHAIN,
-                leadingIcon: Icons.link,
-              ),
-            ],
-          )
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Gap(10.h),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                StatsButton(
+                  buttonName: AppStrings.ALL_CATEGORY,
+                  leadingIcon: Icons.grid_view,
+                ),
+                StatsButton(
+                  buttonName: AppStrings.ALL_CHAIN,
+                  leadingIcon: Icons.link,
+                ),
+              ],
+            ),
+            Gap(20.h),
+         
+          ],
+        ),
       ),
     );
   }

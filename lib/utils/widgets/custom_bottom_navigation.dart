@@ -16,7 +16,7 @@ class AppBottomNavBar extends StatelessWidget {
               color: Theme.of(context).colorScheme.secondary.withOpacity(0.2),
               width: 1.w),
           borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(60.r), topRight: Radius.circular(60.r)),
+              topLeft: Radius.circular(50.r), topRight: Radius.circular(50.r)),
           gradient: LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
