@@ -29,12 +29,21 @@ class StatisticPage extends StatelessWidget {
               indicatorColor: Theme.of(context).colorScheme.secondary,
               labelColor: Colors.white,
               unselectedLabelColor: Colors.grey,
-              indicator: BoxDecoration(
-                  border: Border.fromBorderSide(
-
-            
-              )),
+              overlayColor:
+                  const WidgetStatePropertyAll(AppColorss.BACKGROUND_2),
               labelPadding: EdgeInsets.symmetric(vertical: 5.h),
+              indicator: BoxDecoration(
+                color: Colors.transparent,
+                // border: Border,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.blueAccent.withOpacity(0.5),
+                    blurRadius: 15,
+                    spreadRadius: 1,
+                    offset: const Offset(0, 0),
+                  ),
+                ],
+              ),
               tabs: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
