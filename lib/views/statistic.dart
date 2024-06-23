@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gap/gap.dart';
 import 'package:nft/constants/app_colors.dart';
 import 'package:nft/constants/app_strings.dart';
+import 'package:nft/utils/widgets/stats_button.dart';
 
 class StatisticPage extends StatelessWidget {
   const StatisticPage({super.key});
@@ -32,18 +34,7 @@ class StatisticPage extends StatelessWidget {
               overlayColor:
                   const WidgetStatePropertyAll(AppColorss.BACKGROUND_2),
               labelPadding: EdgeInsets.symmetric(vertical: 5.h),
-              indicator: BoxDecoration(
-                color: Colors.transparent,
-                // border: Border,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.blueAccent.withOpacity(0.5),
-                    blurRadius: 15,
-                    spreadRadius: 1,
-                    offset: const Offset(0, 0),
-                  ),
-                ],
-              ),
+              indicatorPadding: EdgeInsets.symmetric(horizontal: 10.w),
               tabs: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -67,7 +58,49 @@ class StatisticPage extends StatelessWidget {
                 )
               ]),
         ),
+        body: const TabBarView(children: [
+          Rankingview(),
+          ActivityView(),
+        ]),
       ),
     );
+  }
+}
+
+class Rankingview extends StatelessWidget {
+  const Rankingview({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: [
+          Gap(10.h),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              StatsButton(
+                buttonName: AppStrings.ALL_CATEGORY,
+                leadingIcon: Icons.grid_view,
+              ),
+              StatsButton(
+                buttonName: AppStrings.ALL_CHAIN,
+                leadingIcon: Icons.link,
+              ),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class ActivityView extends StatelessWidget {
+  const ActivityView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
