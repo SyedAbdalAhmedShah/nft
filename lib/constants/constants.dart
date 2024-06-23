@@ -1,4 +1,5 @@
 import 'package:nft/constants/app_assets.dart';
+import 'package:nft/constants/app_strings.dart';
 
 List<String> trendingCollection = [
   AppAssets.NFT_1,
@@ -25,4 +26,13 @@ List<String> topSeller = [
   AppAssets.NFT_19,
   AppAssets.NFT_20,
   AppAssets.NFT_21,
+];
+
+List<String> cryptoNamess = [
+  AppStrings.AZUMI,
+  AppStrings.HAPE,
+  AppStrings.CRYOTO,
+  AppStrings.APE,
+  AppStrings.BAT,
+  AppStrings.MUTANT,
 ];

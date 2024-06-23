@@ -12,10 +12,17 @@ class AppStrings {
   static const String DUMMYNAME2 = "Alex.S";
   static const String ALL_CATEGORY = "All Categories";
   static const String ALL_CHAIN = "All Chains";
+  static const String VIEW_INFO = "View info";
 
   static const String STATS = "STATS";
   static const String RANKING = "Ranking";
   static const String ACTIVITY = "Activity";
+  static const String AZUMI = "Azumi";
+  static const String HAPE = "Hape prime";
+  static const String CRYOTO = "Cryoto";
+  static const String APE = "Ape Club";
+  static const String BAT = "Bat";
+  static const String MUTANT = "Mutant";
 
   static const String VIRTUAL_WORLD = "Virtual World";
   static const String EXPLORE_NFT = "Explore and Mint NFTs";

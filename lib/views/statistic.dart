@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nft/constants/app_colors.dart';
 import 'package:nft/constants/app_strings.dart';
+import 'package:nft/utils/widgets/crypto_list.dart';
 import 'package:nft/utils/widgets/stats_button.dart';
 
 class StatisticPage extends StatelessWidget {
@@ -93,7 +94,8 @@ class Rankingview extends StatelessWidget {
               ],
             ),
             Gap(20.h),
-         
+            
+            CryptoList()
           ],
         ),
       ),
