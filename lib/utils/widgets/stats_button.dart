@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nft/constants/app_colors.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class StatsButton extends StatelessWidget {
   final String buttonName;
@@ -20,7 +20,7 @@ class StatsButton extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 10.h),
       decoration: BoxDecoration(
           color: AppColorss.PRIMARY_COLOR,
-          borderRadius: BorderRadius.circular(30.r),
+          borderRadius: BorderRadius.circular(30.dp),
           border: Border.all(color: AppColorss.BACKGROUND_2)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

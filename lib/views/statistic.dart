@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nft/constants/app_colors.dart';
 import 'package:nft/constants/app_strings.dart';
 import 'package:nft/utils/widgets/crypto_list.dart';
 import 'package:nft/utils/widgets/stats_button.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class StatisticPage extends StatelessWidget {
   const StatisticPage({super.key});
@@ -94,7 +94,6 @@ class Rankingview extends StatelessWidget {
               ],
             ),
             Gap(20.h),
-            
             CryptoList()
           ],
         ),

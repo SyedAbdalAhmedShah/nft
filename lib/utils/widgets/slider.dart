@@ -2,10 +2,10 @@ import 'dart:ui';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nft/constants/app_strings.dart';
 import 'package:nft/models/slider_model.dart';
 import 'package:nft/constants/app_assets.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class AppCarouselSlider extends StatelessWidget {
   const AppCarouselSlider({super.key});
@@ -33,7 +33,7 @@ class AppCarouselSlider extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
                 margin: const EdgeInsets.symmetric(horizontal: 5.0),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(28.r),
+                    borderRadius: BorderRadius.circular(28.dp),
                     image: DecorationImage(
                         image: AssetImage(i.imagePath), fit: BoxFit.cover)),
                 child: Align(

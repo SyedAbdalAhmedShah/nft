@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nft/configs/theme_config.dart';
 import 'package:nft/constants/app_colors.dart';
 import 'package:nft/constants/app_strings.dart';
 import 'package:nft/views/splash.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,15 +22,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(378.39, 787.41),
-      minTextAdapt: true,
-      builder: (context, child) => MaterialApp(
+    return ResponsiveSizer(builder: (context, orientation, deviceType) {
+      return MaterialApp(
         title: AppStrings.APP_NAME,
         theme: ThemeConfig().themeData,
-        home: child,
-      ),
-      child: const SplashPage(),
-    );
+        home: const SplashPage(),
+      );
+    });
   }
 }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nft/constants/app_assets.dart';
 import 'package:nft/constants/app_colors.dart';
 import 'package:nft/constants/app_strings.dart';
 import 'package:nft/constants/constants.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class CryptoList extends StatelessWidget {
   const CryptoList({super.key});
@@ -14,9 +14,9 @@ class CryptoList extends StatelessWidget {
     return Container(
         width: double.infinity,
         height: MediaQuery.sizeOf(context).height,
-        padding: EdgeInsets.all(10.r),
+        padding: EdgeInsets.all(10.dp),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20.r),
+            borderRadius: BorderRadius.circular(20.dp),
             border: Border.all(color: AppColorss.BACKGROUND_2, width: 1.6.w)),
         child: ListView.separated(
           itemCount: cryptoNamess.length,
@@ -34,7 +34,7 @@ class CryptoList extends StatelessWidget {
                     height: 60.h,
                     width: 80.w,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.r),
+                        borderRadius: BorderRadius.circular(10.dp),
                         image: const DecorationImage(
                             image: AssetImage(AppAssets.ART_SLIDER_IMG))),
                   ),
@@ -65,7 +65,7 @@ class CryptoList extends StatelessWidget {
                     children: [
                       Icon(
                         Icons.currency_bitcoin,
-                        size: 15.r,
+                        size: 15.dp,
                       ),
                       const Text(
                         '2000000.52',

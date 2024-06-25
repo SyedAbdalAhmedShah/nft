@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nft/constants/app_colors.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class StyleConfig {
   final BuildContext context;

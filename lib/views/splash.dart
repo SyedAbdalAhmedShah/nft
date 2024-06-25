@@ -2,13 +2,13 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nft/configs/style_config.dart';
 import 'package:nft/constants/app_assets.dart';
 import 'package:nft/constants/app_strings.dart';
 import 'package:nft/utils/anim/fade_route.dart';
 import 'package:nft/views/bottom_nav_bar.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -36,19 +36,19 @@ class SplashPage extends StatelessWidget {
                 Gap(30.h),
                 const Spacer(),
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(27.r),
+                  borderRadius: BorderRadius.circular(27.dp),
                   child: BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
                     child: Container(
                       width: double.infinity,
-                      padding: EdgeInsets.all(30.r),
+                      padding: EdgeInsets.all(30.dp),
                       decoration: BoxDecoration(
                           border: StyleConfig(context: context).linearBorder,
                           color: Theme.of(context)
                               .colorScheme
                               .primary
                               .withOpacity(0.1),
-                          borderRadius: BorderRadius.circular(27.r)),
+                          borderRadius: BorderRadius.circular(27.dp)),
                       child: Column(
                         children: [
                           Text(
@@ -69,7 +69,7 @@ class SplashPage extends StatelessWidget {
                             onTap: () => Navigator.of(context).push(
                                 FadeRoute(page: const BottomNavBarScreen())),
                             child: ClipRRect(
-                              borderRadius: BorderRadius.circular(34.r),
+                              borderRadius: BorderRadius.circular(34.dp),
                               child: BackdropFilter(
                                 filter:
                                     ImageFilter.blur(sigmaX: 10, sigmaY: 10),
@@ -77,7 +77,7 @@ class SplashPage extends StatelessWidget {
                                   padding: EdgeInsets.symmetric(
                                       horizontal: 50.w, vertical: 20.h),
                                   decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(34.r),
+                                    borderRadius: BorderRadius.circular(34.dp),
                                     gradient: StyleConfig(context: context)
                                         .linearGradient,
                                     border: StyleConfig(context: context)

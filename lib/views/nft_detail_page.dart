@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nft/constants/app_assets.dart';
 import 'package:nft/constants/app_colors.dart';
 import 'package:nft/constants/app_strings.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class NftDetailPage extends StatelessWidget {
   final String imagePath;
@@ -58,11 +58,11 @@ class NftDetailPage extends StatelessWidget {
               flex: 5,
               child: Container(
                 width: double.infinity,
-                padding: EdgeInsets.all(20.r),
+                padding: EdgeInsets.all(20.w),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(50.r),
-                      topRight: Radius.circular(50.r),
+                      topLeft: Radius.circular(50.dp),
+                      topRight: Radius.circular(50.dp),
                     ),
                     color: Colors.white,
                     image: DecorationImage(
@@ -97,7 +97,7 @@ class NftDetailPage extends StatelessWidget {
                             Chip(
                               backgroundColor: AppColorss.BACKGROUND_2,
                               shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20.r),
+                                  borderRadius: BorderRadius.circular(20.dp),
                                   side: const BorderSide(
                                       color: Colors.transparent)),
                               label: const Text("200"),

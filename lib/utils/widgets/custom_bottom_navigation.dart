@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nft/constants/app_assets.dart';
 import 'package:nft/constants/app_colors.dart';
 import 'package:nft/notifier/bottom_nav_notifier.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class AppBottomNavBar extends StatelessWidget {
   final BottomNavNotifier navNotifier;
@@ -16,7 +16,7 @@ class AppBottomNavBar extends StatelessWidget {
               color: Theme.of(context).colorScheme.secondary.withOpacity(0.2),
               width: 1.w),
           borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(50.r), topRight: Radius.circular(50.r)),
+              topLeft: Radius.circular(50.dp), topRight: Radius.circular(50.dp)),
           gradient: LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,

@@ -1,11 +1,11 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nft/configs/style_config.dart';
 import 'package:nft/utils/anim/fade_route.dart';
 import 'package:nft/views/nft_detail_page.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class GlassCard extends StatelessWidget {
   final String imagePath;
@@ -19,7 +19,7 @@ class GlassCard extends StatelessWidget {
         imagePath: imagePath,
       ))),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(20.r),
+        borderRadius: BorderRadius.circular(20.dp),
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
           child: Container(
@@ -29,7 +29,7 @@ class GlassCard extends StatelessWidget {
             decoration: BoxDecoration(
                 border: StyleConfig(context: context).linearBorder,
                 gradient: StyleConfig(context: context).linearGradient2,
-                borderRadius: BorderRadius.circular(20.r)),
+                borderRadius: BorderRadius.circular(20.dp)),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -37,7 +37,7 @@ class GlassCard extends StatelessWidget {
                   height: 120.h,
                   width: 140.w,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.r),
+                      borderRadius: BorderRadius.circular(20.dp),
                       image: DecorationImage(
                           image: AssetImage(
                             imagePath,
@@ -53,7 +53,7 @@ class GlassCard extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.favorite,
-                          size: 14.r,
+                          size: 14.dp,
                           color: Colors.red,
                         ),
                         const Text("200"),
